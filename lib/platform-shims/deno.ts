@@ -22,9 +22,9 @@ const REQUIRE_DIRECTORY_ERROR =
   'loading a directory of commands is not supported yet for ESM';
 
 const DENO_ENV_PERMITTED: boolean =
-  (await Deno.permissions.query({name: 'env'})).state === 'granted';
+  (Deno.permissions.querySync({name: 'env'})).state === 'granted';
 const DENO_READ_CWD_PERMITTED: boolean =
-  (await Deno.permissions.query({name: 'read', path: '.'})).state === 'granted';
+  (Deno.permissions.querySync({name: 'read', path: '.'})).state === 'granted';
 
 // Deno removes argv[0] and argv[1] from Deno.args:
 const argv = ['deno run', ...Deno.args];
