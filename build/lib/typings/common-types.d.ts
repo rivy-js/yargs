@@ -1,14 +1,14 @@
 import { Parser } from './yargs-parser-types.js';
-export type nil = undefined | null;
-export type Dictionary<T = any> = {
+export declare type nil = undefined | null;
+export declare type Dictionary<T = any> = {
     [key: string]: T;
 };
-export type DictionaryKeyof<T, U = any> = Exclude<KeyOf<T, Dictionary<U>>, KeyOf<T, any[]>>;
-export type KeyOf<T, U> = Exclude<{
+export declare type DictionaryKeyof<T, U = any> = Exclude<KeyOf<T, Dictionary<U>>, KeyOf<T, any[]>>;
+export declare type KeyOf<T, U> = Exclude<{
     [K in keyof T]: T[K] extends U ? K : never;
 }[keyof T], undefined>;
-export type NotEmptyArray<T = any> = [T, ...T[]];
-export type ValueOf<T> = T extends (infer U)[] ? U : T[keyof T];
+export declare type NotEmptyArray<T = any> = [T, ...T[]];
+export declare type ValueOf<T> = T extends (infer U)[] ? U : T[keyof T];
 export declare function assertNotStrictEqual<N, T>(actual: T | N, expected: N, shim: PlatformShim, message?: string | Error): asserts actual is Exclude<T, N>;
 export declare function assertSingleKey(actual: string | string[] | Dictionary, shim: PlatformShim): asserts actual is string;
 export declare function objectKeys<T extends {}>(object: T): (keyof T)[];

@@ -3,7 +3,7 @@ import { PlatformShim } from './typings/common-types.js';
 import { UsageInstance } from './usage.js';
 import { YargsInstance } from './yargs-factory.js';
 import { Arguments, DetailedArguments } from './typings/yargs-parser-types.js';
-type CompletionCallback = (err: Error | null, completions: string[] | undefined) => void;
+declare type CompletionCallback = (err: Error | null, completions: string[] | undefined) => void;
 export interface CompletionInstance {
     completionKey: string;
     generateCompletionScript($0: string, cmd: string): string;
@@ -38,7 +38,7 @@ export declare class Completion implements CompletionInstance {
     setParsed(parsed: DetailedArguments): void;
 }
 export declare function completion(yargs: YargsInstance, usage: UsageInstance, command: CommandInstance, shim: PlatformShim): CompletionInstance;
-export type CompletionFunction = SyncCompletionFunction | AsyncCompletionFunction | FallbackCompletionFunction;
+export declare type CompletionFunction = SyncCompletionFunction | AsyncCompletionFunction | FallbackCompletionFunction;
 interface SyncCompletionFunction {
     (current: string, argv: Arguments): string[] | Promise<string[]>;
 }

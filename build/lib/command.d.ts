@@ -4,7 +4,7 @@ import { Positional } from './parse-command.js';
 import { UsageInstance } from './usage.js';
 import { ValidationInstance } from './validation.js';
 import { YargsInstance, Options, OptionDefinition, Arguments, DetailedArguments } from './yargs-factory.js';
-export type DefinitionOrCommandName = string | CommandHandlerDefinition;
+export declare type DefinitionOrCommandName = string | CommandHandlerDefinition;
 export declare class CommandInstance {
     shim: PlatformShim;
     requireCache: Set<string>;
@@ -70,7 +70,7 @@ export interface CommandHandler {
     optional: Positional[];
     original: string;
 }
-export type CommandBuilder = CommandBuilderCallback | Dictionary<OptionDefinition>;
+export declare type CommandBuilder = CommandBuilderCallback | Dictionary<OptionDefinition>;
 interface CommandBuilderCallback {
     (y: YargsInstance, helpOrVersionSet: boolean): YargsInstance | void;
 }
@@ -79,7 +79,7 @@ export declare function isCommandHandlerDefinition(cmd: DefinitionOrCommandName 
 interface Positionals extends Pick<Options, 'alias' | 'array' | 'default'> {
     demand: Dictionary<boolean>;
 }
-type FrozenCommandInstance = {
+declare type FrozenCommandInstance = {
     handlers: Dictionary<CommandHandler>;
     aliasMap: Dictionary<string>;
     defaultCommand: CommandHandler | undefined;

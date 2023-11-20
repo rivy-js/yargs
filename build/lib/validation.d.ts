@@ -22,4 +22,4 @@ export interface ValidationInstance {
     unknownArguments(argv: Arguments, aliases: DetailedArguments['aliases'], positionalMap: Dictionary, isDefaultCommand: boolean, checkPositionals?: boolean): void;
     unknownCommands(argv: Arguments): boolean;
 }
-export type KeyOrPos = string | number;
+export declare type KeyOrPos = string | number;

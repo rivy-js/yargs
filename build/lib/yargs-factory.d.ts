@@ -6,7 +6,7 @@ import { UsageInstance, FailureFunction } from './usage.js';
 import { CompletionFunction } from './completion.js';
 import { ValidationInstance, KeyOrPos } from './validation.js';
 import { MiddlewareCallback, Middleware } from './middleware.js';
-export declare function YargsFactory(_shim: PlatformShim): (processArgs?: string | string[], cwd?: string, parentRequire?: RequireType) => YargsInstance;
+export declare function YargsFactory(_shim: PlatformShim): (processArgs?: string | string[], cwd?: string, parentRequire?: RequireType | undefined) => YargsInstance;
 declare const kCopyDoubleDash: unique symbol;
 declare const kCreateLogger: unique symbol;
 declare const kDeleteFromParserHintObject: unique symbol;
