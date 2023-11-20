@@ -3,13 +3,13 @@
 import {
   assertNotEquals,
   assertStrictEquals,
-} from 'https://deno.land/std/testing/asserts.ts';
+} from 'https://deno.land/std@0.134.0/testing/asserts.ts';
 import {
   basename,
   dirname,
   extname,
   posix,
-} from 'https://deno.land/std/path/mod.ts';
+} from 'https://deno.land/std@0.134.0/path/mod.ts';
 
 import cliui from 'https://deno.land/x/cliui@v7.0.4-deno/deno.ts';
 import escalade from 'https://deno.land/x/escalade@v3.0.3/sync.ts';
