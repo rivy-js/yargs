@@ -47,7 +47,7 @@ const path = {
     } catch (err) {
       // Some yargs features require read access to the file system,
       // e.g., support for multiple locales.
-      if (err.name !== 'PermissionDenied') {
+      if ((err as { name?: string })?.name !== 'PermissionDenied') {
         throw err;
       }
       return p1;
