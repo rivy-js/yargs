@@ -14,7 +14,7 @@ import {
 import cliui from 'https://deno.land/x/cliui@v7.0.4-deno/deno.ts';
 import escalade from 'https://cdn.jsdelivr.net/gh/rivy-fix/escalade@19b6c73c3e/deno/sync.ts'; // 3.1.1-deno-rivy
 import Parser from 'https://cdn.jsdelivr.net/gh/rivy-fix/yargs-parser@78e3cb983e/deno.ts'; // 21.1.1-deno-rivy
-import y18n from 'https://cdn.jsdelivr.net/gh/rivy-fix/y18n@b3e551ddac/deno.ts'; // v5.0.8-deno-rivy
+import y18n from 'https://cdn.jsdelivr.net/gh/rivy-fix/y18n@f4c2ca0c60/deno.ts'; // v5.0.8-deno-rivy+TRY
 import {YError} from '../../build/lib/yerror.js';
 
 const REQUIRE_ERROR = 'require is not supported by ESM';
